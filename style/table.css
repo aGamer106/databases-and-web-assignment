@@ -1,0 +1,27 @@
+.table, .table-bordered, .table-dark {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 70%;
+}
+
+th, td {
+    text-align: center;
+}
+
+table, th, td {
+    border: 10px solid white;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    font-family: "Myriad Pro", monospace;
+    font-weight: bold;
+}
+
+

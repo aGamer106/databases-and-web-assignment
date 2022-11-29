@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+}
+
+.container {
+    margin-left:auto;
+    margin-right:auto;
+    height:100%;
+    width:auto;
+}
+
+#video {
+    box-shadow: #23151b;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.welcome {
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 100%;
+    padding: 200px;
+    -webkit-animation: fadein 6s;
+    -moz-animation: fadein 6s;
+    -ms-animation: fadein 6s;
+    -o-animation: fadein 6s;
+    animation: fadein 6s;
+}
+
+
+#title {
+    font-family: Biko, Monaco, monospace;
+    text-align: center;
+    font-size: 70px;
+    color: #d90c0c;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: gray;
+}
+
+
+#quote {
+    font-family: "Fira Sans Condensed", system-ui;
+    text-align: center;
+}
+
+
+#map {
+    width: 30%;
+    height: 70%;
+    margin: 0 auto;
+    display:inline-block;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 3; }
+}
+
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 3; }
+}
+
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 3; }
+}
+
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 3; }
+}
+
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 3; }
+}

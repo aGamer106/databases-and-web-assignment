@@ -1,0 +1,15 @@
+#footer {
+    bottom: 0;
+    left: 0;
+    background-color: #23151b;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+#footer-text {
+    font-family: Biko, Monaco, monospace;
+    color: #d90c0c;
+    font-size: 15px;
+    font-weight: bold;
+}
