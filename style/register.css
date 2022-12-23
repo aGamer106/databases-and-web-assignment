@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url(photos/register-background.jpg);
+    background-repeat: no-repeat;
+    /*overflow: hidden;*/
+    /*background-size: cover;*/
+    backdrop-filter: blur(3px);
+}
+
+.container {
+    width: 380px;
+    margin: auto;
+    border-radius: 25px;
+    background-color: rgba(0,0,0,0.1);
+    
+}
+
+.header {
+    text-align: center;
+    padding-top: 75px;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 45px;
+    margin-bottom: 80px;
+}
+
+.main {
+    text-align: center;
+}
+
+.main button {
+    padding-left: 0;
+    background-color: #83acf1;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.main button:hover, input:hover {
+    box-shadow: 2px 2px 5px #4b1717;
+    background-color: #7799d4;
+}
+
+.main input:hover {
+    box-shadow: 2px 2px 5px #555;
+    background-color: #ddd;
+
+}
+
+.main input, button {
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+
+.main span {
+    position: relative;
+}
+
+.main i {
+    position: absolute;
+    left: 15px;
+    color: #050b70;
+    font-size: 16px;
+    top: 2px;
+}

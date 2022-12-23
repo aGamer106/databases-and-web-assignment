@@ -1,8 +1,6 @@
-<?php
-require 'navbar.php';
-//require 'footer.php';
-?>
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <title>Mini Gym - Home</title>
@@ -22,31 +20,28 @@ require 'navbar.php';
     <video autoplay muted loop id="video">
         <source src="util/videos/background.mp4" type="video/mp4">
     </video>
+    <?php
+    require 'navbar.php';
+    ?>
+
 
 
     <div class="welcome">
-
         <h1 id="title">Welcome to MiniGym!</h1>
-        <p id="quote">Situated in the steel city of Sheffield, we make it easier for you to reach your goals and stay disciplined.</p>
-        <p id="quote">We are here for everybody. And for every single kind of body.</p>
-        <p id="quote">Join us today! Create an account or login and you're almost there!</p>
-        <p id="quote">We are working in close partnership with The University of Sheffield & Sheffield Hallam University.</p>
-        <p id="quote">Students are eligible for tons of benefits!</p>
-
+        <p id="quote">Situated in the steel city of Sheffield, we make it easier for you to reach your goals</p>
+        <p id="quote">and stay disciplined.</p>
+        <p id="quote">Join us today!</p>
         <?php
         require 'membership.php';
         ?>
-
     </div>
 
+
+
 </body>
-
-
 
     <?php
     require 'footer.php';
     ?>
-
-
 
 </html>

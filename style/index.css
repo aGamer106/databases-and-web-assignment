@@ -2,11 +2,14 @@ body {
     margin: 0;
 }
 
+
+
 .container {
     margin-left:auto;
     margin-right:auto;
     height:100%;
     width:auto;
+    backdrop-filter: blur(5px);
 }
 
 #video {
@@ -17,15 +20,13 @@ body {
 }
 
 .welcome {
-    position: relative;
+    position: fixed;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(37, 36, 36, 0.5);
     color: #f1f1f1;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
     width: 100%;
-    padding: 200px;
+    padding: 137px;
+    overflow: hidden;
     -webkit-animation: fadein 6s;
     -moz-animation: fadein 6s;
     -ms-animation: fadein 6s;
@@ -56,6 +57,8 @@ body {
     margin: 0 auto;
     display:inline-block;
 }
+
+
 
 @keyframes fadein {
     from { opacity: 0; }

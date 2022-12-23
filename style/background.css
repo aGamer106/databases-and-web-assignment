@@ -1,8 +1,13 @@
 #register-background {
+    content: "";
+    background-color: black;
     filter: blur(10px);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: fixed;
+    margin: -30px;
+}
+
+#login-background {
+    position: fixed;
+    filter: blur(10px);
+    width: 100%;
 }

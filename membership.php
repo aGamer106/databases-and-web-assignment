@@ -1,4 +1,4 @@
-<table class="table table-bordered table-light">
+<table class="table table-bordered table-dark">
     <thead class="thead-dark">
     <tr>
         <th scope="col">Membership Type</th>
@@ -17,3 +17,4 @@
 
     </tbody>
 </table>
+
