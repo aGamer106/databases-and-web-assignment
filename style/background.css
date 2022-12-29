@@ -5,9 +5,3 @@
     position: fixed;
     margin: -30px;
 }
-
-#login-background {
-    position: fixed;
-    filter: blur(10px);
-    width: 100%;
-}

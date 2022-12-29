@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Database Connection</title>
+</head>
+<body>
 <?php
 
 $db = new SQLite3("C:\\xampp\\data\\miniGym.db");
@@ -11,3 +17,9 @@ else {
 }
 
 ?>
+
+<a href="http://localhost:8080/Assignment/index.php">Home</a>
+
+</body>
+
+</html>
