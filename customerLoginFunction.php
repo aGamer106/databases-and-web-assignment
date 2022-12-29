@@ -32,3 +32,5 @@ function loginCustomer()
         return $logged;
 }
 ?>
+
+
