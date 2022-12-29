@@ -16,7 +16,7 @@
                     echo "Error logging in!";
                 }
             ?>
-<div><a href="login.php">Back to Login</a></div>
-</div>
-</main>
+        <div><a href="login.php">Back to Login</a></div>
+        </div>
+    </main>
 </div>
