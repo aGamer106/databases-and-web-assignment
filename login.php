@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-?>
 <html lang="en">
 <head>
     <title>Welcome back!</title>
@@ -32,7 +29,7 @@
 
         if($allFields == "yes") {
             $loginCustomer = loginCustomer();
-            header('Location: loginResult.php?loginCustomer='.$loginCustomer);
+            header('Location: loginResult.php?customerLoginFunction='.$loginCustomer);
         }
 
     }
@@ -64,17 +61,15 @@
             ?>
 
             <div class="password">
-                Forgot Password ?
+                Forgot Password ?<a href="reset.php"></a>
             </div>
             <div class="button">
-            <input type="submit" value="Login" name="submit"> <a href="loginResult.php">Login</a>
+                <input type="submit" value="Login" name="submit"> <a href="loginResult.php">Login</a>
             </div>
             <div class="signup-link">
                 Not a member ? <a href="register.php">Create an account</a>
             </div>
-            <div class="signup-link">
-                Forgot password ? <a href="reset.php">Reset here</a>
-            </div>
+
         </form>
     </div>
 
