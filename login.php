@@ -55,7 +55,7 @@
                 <span class="text-danger"><?php echo $pwderr; ?></span>
             </div>
             <div class="password">
-                Forgot Password ?<a href="reset.php"></a>
+                <a href="reset.php"> Forgot Password ? </a>
             </div>
             <div class="button">
                 <input type="submit" value="Login" name="submit">
@@ -63,13 +63,12 @@
             <div class="signup-link">
                 Not a member ? <a href="register.php">Create an account</a>
             </div>
+            <div class="signup-link">
+                Staff Login <a href="staffLogin.php">Staff</a>
+            </div>
 
         </form>
     </div>
-
-
-
-
 
 
     <?php
