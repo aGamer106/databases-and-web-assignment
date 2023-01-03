@@ -10,28 +10,33 @@
 <body>
     <?php
     require 'navbar.php';
-    include_once 'customerLoginFunction.php';
+    require_once 'customerLoginFunction.php';
 
-    $erroremail = $errorpassword = "";
+    $emailerr = $pwderr = "";
+    $array_user = "";
 
-    $allFields = "yes";
-
-    if(isset($_POST['submit'])) {
-
-        if ($_POST['email']==""){
-            $errorpassword = "Email mandatory";
-            $allFields = "no";
+    if (isset($_POST['submit'])) {
+        if ($_POST["email"]==null) {
+            $nameErr = "Email Address is required";
         }
-        if ($_POST['password']==""){
-            $errorpassword = "Password mandatory";
-            $allFields = "no";
+        if ($_POST["password"]==null) {
+            $pwderr = "Password is required";
         }
 
-        if($allFields == "yes") {
-            $loginCustomer = loginCustomer();
-            header('Location: loginResult.php?customerLoginFunction='.$loginCustomer);
+        if($_POST['email'] != null && $_POST["password"] !=null)
+        {
+            $array_user = verifyUsers();
+            if ($array_user != null) {
+                session_start();
+                $_SESSION['email'] = $array_user[0]['email'];
+                $_SESSION['password'] = $array_user[0]['password'];
+                header("Location: loginResult.php");
+                exit();
+            }
+            else{
+                $invalidMesg = "Invalid username and password!";
+            }
         }
-
     }
 
 
@@ -40,31 +45,20 @@
 
     <div class="center">
         <h1>Login</h1>
-        <form method="post" action="#">
+        <form method="post">
             <div class="txt_field">
-                <input type="text" required>
-                <label>Email Address</label>
+                <input type="text" name="email" required >
+                <span class="text-danger"><?php echo $emailerr; ?></span>
             </div>
             <div class="txt_field">
-                <input type="password" required>
-                <label>Password</label>
+                <input type="password" name="password" required>
+                <span class="text-danger"><?php echo $pwderr; ?></span>
             </div>
-            <?php
-                if(isset($_SESSION['error'])) {
-            ?>
-            <div class="alert alert-danger">
-                <?php echo $_SESSION['error'] ?>
-            </div>
-            <?php
-                unset($_SESSION['error']);
-                }
-            ?>
-
             <div class="password">
                 Forgot Password ?<a href="reset.php"></a>
             </div>
             <div class="button">
-                <input type="submit" value="Login" name="submit"> <a href="loginResult.php">Login</a>
+                <input type="submit" value="Login" name="submit">
             </div>
             <div class="signup-link">
                 Not a member ? <a href="register.php">Create an account</a>
