@@ -48,11 +48,15 @@
         <form method="post">
             <div class="txt_field">
                 <input type="text" name="email" required >
-                <span class="text-danger"><?php echo $emailerr; ?></span>
+                <span></span>
+                <label>Email Address</label>
+                <i></i>
             </div>
             <div class="txt_field">
                 <input type="password" name="password" required>
-                <span class="text-danger"><?php echo $pwderr; ?></span>
+                <span></span>
+                <label>Password</label>
+                <i></i>
             </div>
             <div class="password">
                 <a href="reset.php"> Forgot Password ? </a>
@@ -64,7 +68,7 @@
                 Not a member ? <a href="register.php">Create an account</a>
             </div>
             <div class="signup-link">
-                Staff Login <a href="staffLogin.php">Staff</a>
+                 <a href="staffLogin.php">Staff Login</a>
             </div>
 
         </form>
