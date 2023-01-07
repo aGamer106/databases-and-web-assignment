@@ -1,18 +1,29 @@
 <?php
- require 'staff-navbar.php';
-include 'session.php';
-$path = 'staffLogin.php';
+
+    require 'staff-navbar.php';
+    require 'footer.php';
 
 session_start();
-if(!isset($_SESSION['id'])) {
-    session_unset();
-    session_destroy();
-    header("Location:".$path);
+
+if (!isset($_SESSION['id']) || !isset($_SESSION['pwd'])) {
+    header("Location: staffLogin.php");
+    exit();
 }
 
-$id = $_SESSION['id'];
-$pwd = $_SESSION['pwd'];
-checkSession($path);
+$db = new SQLite3('C:\\xampp\\data\\miniGym.db');
+$stmt = $db->prepare('SELECT Auth.id, Auth.pwd, Staff.role, Staff.fname, Staff.lname FROM Auth LEFT JOIN Staff ON Auth.id = Staff.id WHERE Auth.id = :id AND Auth.pwd = :pwd;');
+$stmt->bindParam(':id', $_SESSION['id'], SQLITE3_TEXT);
+$stmt->bindParam(':pwd', $_SESSION['pwd'], SQLITE3_TEXT);
+$stmt->bindParam(':role', $role, SQLITE3_TEXT);
+$result = $stmt->execute();
+$row = $result->fetchArray();
+$role = $row[2];
+$fname = $row[3];
+$lname = $row[4];
+
+//echo "Welcome back, $fname $lname! You are logged in as a $role.";
+
+
  ?>
 
 <!doctype html>
@@ -22,21 +33,40 @@ checkSession($path);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/staff-navbar.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/staff-homepage.css">
     <title>Logged as Staff</title>
 </head>
 <body>
 <div class="container pb-5">
+    <div class="welcome-text">
+
     <main role="main" class="pb-3">
         <?php
-        if(!isset($id) and !isset($pwd)) {
+        if(!isset($_SESSION['id']) || !isset($_SESSION['pwd'])) {
             echo "Error logging in!";
         }
         else {
-            echo '<h2 id="ttl">Hello again, '.$id.' !</h2>';
+//            echo '<h2 id="ttl">Welcome back, '.$fname.' '.$lname.'! You are logged in as '.$role.'.</h2>';
+            if ($role == 'admin') {
+                echo '<h3>Welcome back, '.$fname.' '.$lname.'! You are logged in as an Admin. As an Admin, you have the following privileges:</h3>';
+                echo '<ul>';
+                echo '<li>Option 1</li>';
+                echo '<li>Option 2</li>';
+                echo '<li>Option 3</li>';
+                echo '</ul>';
+            } elseif ($role == 'staff') {
+                echo '<h3>Welcome back, '.$fname.' '.$lname.'! You are logged in as a Staff Member. As a Staff Member, you have the following rights:</h3>';
+                echo '<ul>';
+                echo '<li><a href="customers.php"> Create a Customer Account</a></li>';
+                echo '<li>View Customer Details</li>';
+                echo '</ul>';
+            }
         }
         ?>
-
     </main>
+    </div>
 </div>
 
 </body>
