@@ -1,0 +1,58 @@
+#logo {
+    margin-left: 100px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    float: left;
+    width: 90px;
+    height: 90px;
+}
+
+.navbar-login-button {
+    float: right;
+    background-color: #f5033b;
+    color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 9px 18px;
+    margin-top: 25px;
+    margin-right: 60px;
+    margin-left: 10px;
+    display: inline-block;
+    font-family: Biko, Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.navbar-register-button {
+    float: right;
+    background-color: #f5033b;
+    color: white;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 9px 18px;
+    margin-top: 25px;
+    margin-right: 40px;
+    margin-left: 10px;
+    display: inline-block;
+    font-family: Biko, Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+.slide_left:hover {
+    color: black;
+    box-shadow: inset 0 0 0 50px #75f1f1;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #23151b;
+    height: 95px;
+    width: 100%;
+}
