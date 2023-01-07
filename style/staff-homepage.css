@@ -1,0 +1,9 @@
+body {
+    display: flex;
+    margin: 0;
+}
+
+.welcome-text {
+    text-align: center;
+    margin-top: 120px;
+}
