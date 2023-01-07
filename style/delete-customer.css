@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    margin: 0;
+    background-image: url("photos/mario.jpg");
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.container h1 {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 70px;
+    color: #d90c0c;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: gray;
+}
