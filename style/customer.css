@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    margin: 0;
+    background-image: url("photos/fence.jpg");
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+    overflow-y: scroll;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container .table {
+    width: 75%;
+    height: 55%;
+    /*margin: 0 auto;*/
+    margin-top: 120px;
+    border-radius: 25px;
+    font-size: 12px;
+}
+
+.container .table tr:nth-child(odd) {
+    background-color: #f37c0a;
+}
+
+.container .table tr:nth-child(even) {
+    background-color: #eeab38;
+}
