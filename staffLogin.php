@@ -1,5 +1,5 @@
 <?php
-require 'navbar.php'
+    require 'navbar.php';
 ?>
 
 <!doctype html>
@@ -16,36 +16,33 @@ require 'navbar.php'
 </head>
 <body>
     <?php
-
     require_once 'staffLoginSQL.php';
 
     $iderr = $pwdErr = "";
     $array_user = "";
 
     if (isset($_POST['submit'])) {
-        if ($_POST["id"]==null) {
-            $iderr = "Email Address is required";
-        }
-        if ($_POST["password"]==null) {
-            $pwdErr = "Password is required";
-        }
-
-        if($_POST['id'] != null && $_POST["password"] !=null)
-        {
+        if (!isset($_POST['id']) || !isset($_POST['pwd']) || empty($_POST['id']) || empty($_POST['pwd'])) {
+            if (!isset($_POST['id']) || empty($_POST['id'])) {
+                $iderr = "Email Address is required";
+            }
+            if (!isset($_POST['pwd']) || empty($_POST['pwd'])) {
+                $pwdErr = "Password is required";
+            }
+        } else {
             $array_user = checkStaff();
-            print_r(checkStaff());
             if ($array_user != null) {
                 session_start();
                 $_SESSION['id'] = $array_user[0]['id'];
-                $_SESSION['password'] = $array_user[0]['password'];
+                $_SESSION['pwd'] = $array_user[0]['pwd'];
                 header("Location: staffHomepage.php");
                 exit();
-            }
-            else{
+            } else {
                 $invalidMesg = "Invalid username or password!";
             }
         }
     }
+
     ?>
     <div class="center">
         <h1>Staff Login</h1>
@@ -54,20 +51,22 @@ require 'navbar.php'
                 <input type="text" name="id" required>
                 <span></span>
                 <label>Staff Member ID</label>
+                <?php echo $iderr?>
             </div>
             <div class="txt_field">
-                <input type="password" name="password" required>
+                <input type="password" name="pwd" required>
                 <span></span>
                 <label>Password</label>
+                <?php echo $pwdErr?>
             </div>
             <input type="submit" value="Login" name="submit">
         </form>
     </div>
 
+    <?php
+    require 'footer.php';
+    ?>
 </body>
 
 
-<?php
-require 'footer.php';
-?>
 </html>
