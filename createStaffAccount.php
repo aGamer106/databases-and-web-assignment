@@ -67,6 +67,8 @@ function createStaffAccount()
 
     return $created;
 
+
+
 }
 
 
@@ -88,17 +90,13 @@ function createStaffAccount()
 <body>
 <?php
 if (isset($_POST['submit'])) {
-    if (createStaffAccount()) {
-        $pwd = generateStaffPassword($_POST['fname'], $_POST['lname']);
-        $db = new SQLite3('C:\\xampp\\data\\miniGym.db');
-        $stmt = $db->prepare('INSERT INTO Auth(id, pwd) VALUES (:id, :pwd)');
-        $stmt->bindParam(':id', $id, SQLITE3_TEXT);
-        $stmt->bindParam(':pwd', $pwd, SQLITE3_TEXT);
-        $stmt->execute();
-        echo "<p>Staff account created successfully!</p>";
-    } else {
-        echo "<p>Failed to create staff account.</p>";
-    }
+
+    $createStaffAccount = createStaffAccount();
+    header("Location: staffCreationOutcome.php?createStaffAccount=".$createStaffAccount);
+
+
+//        echo "<p>Failed to create staff account.</p>";
+
 }
 
 
