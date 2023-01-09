@@ -1,5 +1,5 @@
 <?php
-    require 'navbar.php';
+    require 'user-navbar.php';
     include 'session.php';
     $path = 'login.php';
 
