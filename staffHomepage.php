@@ -52,9 +52,9 @@ $lname = $row[4];
             if ($role == 'admin') {
                 echo '<h3>Welcome back, '.$fname.' '.$lname.'! You are logged in as an Admin. As an Admin, you have the following privileges:</h3>';
                 echo '<ul>';
-                echo '<li>Option 1</li>';
-                echo '<li>Option 2</li>';
-                echo '<li>Option 3</li>';
+                echo '<li><span><a href="createStaffAccount.php">Create A Staff Account</a></span></li>';
+                echo '<li><span><a href="staff.php">Manage Staff Accounts</span></a></li>';
+                echo '<li><span><a href="payments.php">Manage Payments</a></span></li>';
                 echo '</ul>';
             } elseif ($role == 'staff') {
                 echo '<h3>Welcome back, '.$fname.' '.$lname.'! You are logged in as a Staff Member. As a Staff Member, you have the following rights:</h3>';
