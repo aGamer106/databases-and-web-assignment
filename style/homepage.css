@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    background-image: url("photos/homepage-bg.jpg");
+    backdrop-filter: blur(7px);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    margin: 0;
+    padding: 25px;
+}
