@@ -21,6 +21,10 @@
     font-family: Biko, Monaco, monospace;
     font-size: 14px;
     letter-spacing: 1px;
+    box-shadow: inset 0 0 0 0 #D80286;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
     cursor: pointer;
 }
 
@@ -38,14 +42,29 @@
     font-family: Biko, Monaco, monospace;
     font-size: 14px;
     letter-spacing: 1px;
-    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #D80286;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
 }
 
 
-.slide_left:hover {
+/*.slide_left:hover {*/
+/*    color: black;*/
+/*    box-shadow: inset 0 0 0 50px #75f1f1;*/
+/*}*/
+
+.navbar-login-button:hover {
+    background-color: #75f1f1;
     color: black;
-    box-shadow: inset 0 0 0 50px #75f1f1;
 }
+
+.navbar-register-button:hover {
+    background-color: #75f1f1;
+    color: black;
+}
+
+
 
 #navbar {
     position: fixed;
