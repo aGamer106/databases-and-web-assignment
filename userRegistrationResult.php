@@ -16,7 +16,7 @@
                     echo "Error";
                 }
             ?>
-            <div><a href="register.php">Back to registration</a></div>
+            <div><a href="login.php">Login To Your Account</a></div>
         </div>
     </main>
 </div>
