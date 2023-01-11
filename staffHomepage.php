@@ -54,13 +54,14 @@ $lname = $row[4];
                 echo '<ul>';
                 echo '<li><span><a href="createStaffAccount.php">Create A Staff Account</a></span></li>';
                 echo '<li><span><a href="staff.php">Manage Staff Accounts</span></a></li>';
-                echo '<li><span><a href="payments.php">Manage Payments</a></span></li>';
+//                echo '<li><span><a href="payments.php">Manage Payments</a></span></li>';
                 echo '</ul>';
             } elseif ($role == 'staff') {
                 echo '<h3>Welcome back, '.$fname.' '.$lname.'! You are logged in as a Staff Member. As a Staff Member, you have the following rights:</h3>';
                 echo '<ul>';
-                echo '<li><a href="customers.php"> Create a Customer Account</a></li>';
-                echo '<li>View Customer Details</li>';
+                echo '<li><a href="customers.php"> Manage Customers</a></li>';
+                echo '<li><span><a href="payments.php">Manage Memberships/Payments</a></span></li>';
+                echo '<li><span><a href="createCustomerAccount.php">Create Customer Account</a></span></li>';
                 echo '</ul>';
             }
         }
