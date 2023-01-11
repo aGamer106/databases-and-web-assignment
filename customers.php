@@ -54,6 +54,8 @@ $db = new SQLite3('C:\\xampp\\data\\miniGym.db');
             $postcode = $row['postcode'];
             $password = $row['password'];
             $username = $row['username'];
+//            $membership = $row['membership'];
+//            $payment_status = $row['payment_status'];
             echo '<tr>';
             echo "<td><a href='updateCustomerDetails.php?username=$username&fname=$fname&lname=$lname&datebirth=$datebirth&email=$email&postcode=$postcode&password=$password'>$username</a></td>";
             echo "<td>$fname</td>";
