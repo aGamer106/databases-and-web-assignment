@@ -21,7 +21,7 @@ body {
     max-width: 700px;
     width: 100%;
     background: linear-gradient(135deg, #1e258c, #0a97ee);
-    padding: 25px 30px;
+    padding: 9px 30px;
     border-radius: 30px;
 }
 
@@ -47,6 +47,7 @@ body {
     height: 3px;
     width: 30px;
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
 }
 
 .container form .user-details {
