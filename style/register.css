@@ -109,7 +109,9 @@ form .button input {
 
 form .button input:hover {
     background: linear-gradient(-135deg, #31d724, #fff702);
-    transition-duration: 0.3s;
+    /*transition-duration: 0.3s;*/
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 @media (max-width: 584px) {
