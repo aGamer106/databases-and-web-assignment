@@ -16,6 +16,7 @@ $email = $_GET['email'];
 $postcode = $_GET['postcode'];
 $password = $_GET['password'];
 
+
 if (isset($_POST['submit'])) {
     $stmt = $db->prepare("UPDATE Customer SET fname = ?, lname = ?, datebirth = ?, email = ?, postcode = ?, password = ? WHERE username = ?");
     $stmt->bindValue(1, $_POST['fname']);
@@ -24,6 +25,7 @@ if (isset($_POST['submit'])) {
     $stmt->bindValue(4, $_POST['email']);
     $stmt->bindValue(5, $_POST['postcode']);
     $stmt->bindValue(6, $_POST['password']);
+//    $stmt->bindValue(7, $_POST['membership']);
     $stmt->bindValue(7, $username);
     $result = $stmt->execute();
 
@@ -102,6 +104,22 @@ if (isset($_POST['submit'])) {
                         </span>
                 <input type="password" placeholder="Password..." name="password" value="<?php echo $postcode; ?>" required>
             </div>
+<!--            <div class="input-box">-->
+<!--                        <span class="details">-->
+<!--                            Membership Type-->
+<!--                        </span>-->
+<!--                <input type="text" placeholder="Membership..." name="membership" value="--><?php //echo $membership; ?><!--" required>-->
+<!--            </div>-->
+<!--            <div class="input-box">-->
+<!--                <span class="details">-->
+<!--                    Payment Status-->
+<!--                </span>-->
+<!--                <select id="payment_status" name="payment_status" required>-->
+<!--                    <option value="--><?php //echo $payment_status; ?><!--" name="pending">pending</option>-->
+<!--                    <option value="--><?php //echo $payment_status; ?><!--" name="active">active</option>-->
+<!--                    <option value="--><?php //echo $payment_status; ?><!--" name="suspended">suspended</option>-->
+<!--                </select>-->
+<!--            </div>-->
             <div class="button">
                 <input type="submit" value="Update User Details" name="submit">
             </div>
