@@ -38,7 +38,7 @@ require 'navbar.php';?>
             if ($array != null) {
                 $_SESSION['username'] = $array[0]['username'];
                 $_SESSION['password'] = $array[0]['password'];
-                header("Location: reset2.php");
+                header("Location: login.php");
                 exit();
             }
             else{
